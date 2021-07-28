@@ -15,7 +15,18 @@ include __DIR__ ."/db/db.php";
 </head>
 <body>
     <div class="container">
-        <div class="row"></div>
+        <div class="row">
+            <?php foreach($dischi as $card) {?>
+                <div class="col">
+                    <div class="card">
+                        <img src="<?php echo $card['poster'] ?>" alt="<?php echo $card['title'] ?>">
+                        <h3><?php echo $card['title'] ?></h3>
+                        <h4><?php echo $card['author'] ?></h4>
+                        <h5><?php echo $card['year'] ?></h5>
+                    </div>
+                </div>
+            <?php } ?> 
+        </div>
     </div>
 </body>
 </html>
